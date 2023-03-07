@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect4</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="head">
+            <button class="btn menu">RULES</button>
+            <div class="icons">
+                <div class="topIcons">
+                    <div class="circle p1"></div>
+                    <div class="circle p2"></div>
+                </div>
+                <div class="bottomIcons">
+                    <div class="circle p2"></div>
+                    <div class="circle p1"></div>
+                </div>
+            </div>
+            <button class="btn restart">RESTART</button>
+        </div>
+    </header>
+    <main class="main">
+        <div class="rulesModal">
+            <div class="rules">
+                <div class="rulesHead">
+                    How to Play<div class="closeRules">&times</div>
+                </div>
+                <div class="rulesList">
+                    <ol>
+                        <li>Players must connect 4 of the same colored discs in a row to win.</li>
+                        <li>Only one piece is played at a time.</li>
+                        <li>The board is filled from the bottom to the top</li>
+                        <li>Players can be on the offensive or defensive.</li>
+                        <li>The game ends when there is a 4-in-a-row or a stalemate.</li>
+                        <li>The game ends when 30s passes when a move is not made and the score is incremented in favour of the opponent.</li>
+                        <li>Pressing the restart button clears the score of both players.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <section class="p1scorebox">
+            <div class="scoreBoard">
+                <div class="emoji"></div>
+                <p2 class="name">PLAYER 1</p2>
+                <h1 class="p1Score score">0</h1>
+            </div>
+        </section>
+        <section class="gameboard">
+            <div class="boardframe">
+                <div class="slots" data-col="0" data-row="0"></div>
+                <div class="slots" data-col="1" data-row="0"></div>
+                <div class="slots" data-col="2" data-row="0"></div>
+                <div class="slots" data-col="3" data-row="0"></div>
+                <div class="slots" data-col="4" data-row="0"></div>
+                <div class="slots" data-col="5" data-row="0"></div>
+                <div class="slots" data-col="6" data-row="0"></div>
+                <div class="slots" data-col="0" data-row="1"></div>
+                <div class="slots" data-col="1" data-row="1"></div>
+                <div class="slots" data-col="2" data-row="1"></div>
+                <div class="slots" data-col="3" data-row="1"></div>
+                <div class="slots" data-col="4" data-row="1"></div>
+                <div class="slots" data-col="5" data-row="1"></div>
+                <div class="slots" data-col="6" data-row="1"></div>
+                <div class="slots" data-col="0" data-row="2"></div>
+                <div class="slots" data-col="1" data-row="2"></div>
+                <div class="slots" data-col="2" data-row="2"></div>
+                <div class="slots" data-col="3" data-row="2"></div>
+                <div class="slots" data-col="4" data-row="2"></div>
+                <div class="slots" data-col="5" data-row="2"></div>
+                <div class="slots" data-col="6" data-row="2"></div>
+                <div class="slots" data-col="0" data-row="3"></div>
+                <div class="slots" data-col="1" data-row="3"></div>
+                <div class="slots" data-col="2" data-row="3"></div>
+                <div class="slots" data-col="3" data-row="3"></div>
+                <div class="slots" data-col="4" data-row="3"></div>
+                <div class="slots" data-col="5" data-row="3"></div>
+                <div class="slots" data-col="6" data-row="3"></div>
+                <div class="slots" data-col="0" data-row="4"></div>
+                <div class="slots" data-col="1" data-row="4"></div>
+                <div class="slots" data-col="2" data-row="4"></div>
+                <div class="slots" data-col="3" data-row="4"></div>
+                <div class="slots" data-col="4" data-row="4"></div>
+                <div class="slots" data-col="5" data-row="4"></div>
+                <div class="slots" data-col="6" data-row="4"></div>
+                <div class="slots" data-col="0" data-row="5"></div>
+                <div class="slots" data-col="1" data-row="5"></div>
+                <div class="slots" data-col="2" data-row="5"></div>
+                <div class="slots" data-col="3" data-row="5"></div>
+                <div class="slots" data-col="4" data-row="5"></div>
+                <div class="slots" data-col="5" data-row="5"></div>
+                <div class="slots" data-col="6" data-row="5"></div>
+            </div>
+            <div class="turnDisplay">
+                <h2 class="turnText">Player 1's Turn</h2>
+                <h2 class="time">5<span class="second">s</span></h2>
+            </div>
+            <div class="winnerDisplay">
+                <h2 class="winner"></h2>
+                <h2 class="wins">WINS</h2>
+                <button id="playAgain">Play Again</button>
+            </div>
+        </section>
+        <section class="p2scorebox">
+            <div class="scoreBoard">
+                <div class="emoji"></div>
+                <p2 class="name">PLAYER 2</p2>
+                <h1 class="p2Score score">0</h1>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+    </footer>
+</body>
+</html>
