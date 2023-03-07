@@ -142,7 +142,7 @@ const gameController = (()=>{
 
     let countDown
 
-    function Timer(seconds=5){
+    function Timer(seconds=15){
         const now = Date.now()
         const then = now + seconds * 1000
 
@@ -219,7 +219,7 @@ const displayController = (()=>{
         }
 
         gameController.resetGame()
-        timeLeft.textContent = "5s"
+        timeLeft.textContent = "15s"
         turnText.textContent = "Player 1's Turn"
         turnDisplay.style.backgroundColor = "#ff6488";
         winnerDisplay.style.display = 'none'
