@@ -145,6 +145,7 @@ const gameController = (()=>{
     function Timer(seconds=15){
         const now = Date.now()
         const then = now + seconds * 1000
+        displayController.setTimer(seconds)
 
         let done = false
 
@@ -153,7 +154,7 @@ const gameController = (()=>{
         countDown = setInterval(()=>{
             let secondsLeft = parseInt(Math.round((then - Date.now())/1000))
 
-            if(secondsLeft < 0) {
+            if(secondsLeft <= 0) {
                 clearInterval(countDown)
                 return gameOver(getMarker()=='player2'?'player1':'player2')
             }
